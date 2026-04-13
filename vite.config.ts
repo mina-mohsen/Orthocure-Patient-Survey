@@ -10,7 +10,7 @@ export default defineConfig(({mode}) => {
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || ''),
-      'import.meta.env.VITE_GOOGLE_SCRIPT_URL': JSON.stringify(env.VITE_GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbzIE7UWc8DsOCUjAGZvHkKF-DoY-bfCa2hjqj7KToxO0Jc0WpPwg8vC1C8c8NP_ny8/exec'),
+      'import.meta.env.VITE_GOOGLE_SCRIPT_URL': JSON.stringify(env.VITE_GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbwoHT0q1ybC8-kYfEyQfD3NgQQX94uAYTa2jxGVLQ/exec'),
       'import.meta.env.VITE_DASHBOARD_PASSWORD': JSON.stringify(env.VITE_DASHBOARD_PASSWORD || 'admin'),
     },
     resolve: {
