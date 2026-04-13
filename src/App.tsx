@@ -306,10 +306,14 @@ export default function App() {
     setIsUpdatingPassword(true);
     
     try {
-      // Using query parameters for better compatibility with GAS no-cors POST
-      await fetch(`${scriptUrl}?type=updatePassword&newPassword=${encodeURIComponent(newPassword)}`, {
+      await fetch(scriptUrl, {
         method: 'POST',
-        mode: 'no-cors'
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          type: 'updatePassword',
+          password: newPassword 
+        })
       });
       
       setRemotePassword(newPassword);
